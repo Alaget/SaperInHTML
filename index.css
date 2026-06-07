@@ -5,7 +5,10 @@ body {
     font-size: 30px;
     user-select: none;
 }
-select {
+.clickable {
+    cursor: pointer;
+}
+option {
     cursor: pointer;
 }
 
