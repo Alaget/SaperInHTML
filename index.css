@@ -8,9 +8,6 @@ body {
 .clickable {
     cursor: pointer;
 }
-option {
-    cursor: pointer;
-}
 
 table#gameTable {
     background-color: rgb(57, 109, 57);

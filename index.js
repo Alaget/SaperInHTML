@@ -1,6 +1,6 @@
-let difficulty = "easy";
-function changeDifficulty (event) { 
-    difficulty = event.target.value;
+let difficulty = "middle";
+function changeDifficulty (value) { 
+    difficulty = value;
 }
 
 let size;
@@ -112,9 +112,12 @@ function displayFlags () {
 let bodyObject = document.querySelector("body");
 let selectObject = document.querySelector("#difficultySelectionList");
 bodyObject.setAttribute("oncontextmenu", "return false");
-selectObject.addEventListener("change", workField);
-function workField (event) {
-    changeDifficulty(event);
+selectObject.addEventListener("change", eventFieldHandler);
+function eventFieldHandler (event) {
+    workField(event.target.value);
+}
+function workField (value) {
+    changeDifficulty(value);
     fieldDefinition();
     createFieldHidden();
     createFieldMins();
@@ -173,3 +176,4 @@ function clickEvent (event) {
     createFieldHTML();
     checkWin();
 }
+workField("easy")
