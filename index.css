@@ -5,6 +5,9 @@ body {
     font-size: 30px;
     user-select: none;
 }
+select {
+    cursor: pointer;
+}
 
 table#gameTable {
     background-color: rgb(57, 109, 57);
